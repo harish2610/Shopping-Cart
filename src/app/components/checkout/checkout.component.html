@@ -343,8 +343,8 @@
                                         Card Number is Required
                                     </div>
 
-                                    <div *ngIf="cardNumber.errors.minlength">
-                                        Card Number must be at least 2 characters long
+                                    <div *ngIf="cardNumber.errors.pattern">
+                                        Card Number must be 16 characters long
                                     </div>
                                 </div>
                             </div>
@@ -362,8 +362,8 @@
                                         Security Code is Required
                                     </div>
 
-                                    <div *ngIf="securityCode.errors.minlength">
-                                        Security Code must be at least 2 characters long
+                                    <div *ngIf="securityCode.errors.pattern">
+                                        Security Code must be 3 characters long
                                     </div>
                                 </div>
                             </div>
@@ -380,11 +380,6 @@
                                     </option>
                                 </select>
 
-                                <div *ngIf="expirationMonth.invalid && (expirationMonth.dirty || expirationMonth.touched)" class="alert alert-danger mt-1">
-                                    <div *ngIf="expirationMonth.errors.required">
-                                        Expiration Month is Required
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -399,11 +394,6 @@
                                 </option>
                                 </select>
 
-                                <div *ngIf="expirationYear.invalid && (expirationYear.dirty || expirationYear.touched)" class="alert alert-danger mt-1">
-                                    <div *ngIf="expirationYear.errors.required">
-                                        Expiration Year is Required
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
